@@ -4,7 +4,7 @@ import WelcomePage from "./components/WelcomePage";
 import GetUserComponent from "./components/GetUserComponent";
 
 function App() {
-  const [isLoggedIn, SetIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState("");
 
   return (
@@ -12,9 +12,9 @@ function App() {
       <header className="App-header">
         <div>
           {isLoggedIn ? (
-            <WelcomePage user={user} SetIsLoggedIn={SetIsLoggedIn} />
+            <WelcomePage user={user} setIsLoggedIn={setIsLoggedIn} />
           ) : (
-            <GetUserComponent setUser={setUser} SetIsLoggedIn={SetIsLoggedIn} />
+            <GetUserComponent setUser={setUser} setIsLoggedIn={setIsLoggedIn} />
           )}
         </div>
       </header>

@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-const GetUserComponent = ({ setUser, SetIsLoggedIn }) => {
-  const [userInput, SetUserInput] = useState(" ");
+const GetUserComponent = ({ setUser, setIsLoggedIn }) => {
+  const [userInput, setUserInput] = useState(" ");
 
   function HandleLogin() {
     setUser(userInput);
-    SetIsLoggedIn(true);
+    setIsLoggedIn(true);
   }
 
   return (
@@ -14,7 +14,7 @@ const GetUserComponent = ({ setUser, SetIsLoggedIn }) => {
         <input
           type="text"
           value={userInput}
-          onChange={(event) => SetUserInput(event.target.value)}
+          onChange={(event) => setUserInput(event.target.value)}
         />
         <button onClick={HandleLogin}>Acessar com o nome</button>
       </form>
